@@ -16,13 +16,13 @@ group = "io.github.snd-r"
 version = libs.versions.app.version.get()
 
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(25)
     androidTarget {
-        compilerOptions { jvmTarget.set(JvmTarget.JVM_17) }
+        compilerOptions { jvmTarget.set(JvmTarget.JVM_25) }
         publishLibraryVariants("release")
     }
     jvm {
-        compilerOptions { jvmTarget.set(JvmTarget.JVM_17) }
+        compilerOptions { jvmTarget.set(JvmTarget.JVM_25) }
     }
 
     @OptIn(ExperimentalWasmDsl::class)
@@ -56,8 +56,8 @@ android {
         minSdk = 26
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_25
+        targetCompatibility = JavaVersion.VERSION_25
     }
 }
 

@@ -29,7 +29,7 @@ To run the application, you can either use the JAR file or Docker Compose.
 
 To run the application using the JAR file, follow these steps:
 
-1. Ensure you have Java 17 or higher installed on your system.
+1. Ensure you have Java 25 or higher installed on your system.
 2. Run `java -jar komf-1.0-SNAPSHOT-all.jar <path to config>`.
 
 ### Running with Docker Compose

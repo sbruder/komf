@@ -1,10 +1,4 @@
-FROM eclipse-temurin:21-jre AS base-amd64
-
-FROM eclipse-temurin:21.0.6_7-jre AS base-arm64
-
-FROM eclipse-temurin:17-jre AS base-arm
-
-FROM base-${TARGETARCH} AS build-final
+FROM eclipse-temurin:25-jre AS build-final
 
 RUN apt-get update && apt-get install -y pipx \
     && rm -rf /var/lib/apt/lists/*

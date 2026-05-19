@@ -10,17 +10,17 @@ group = "io.github.snd-r"
 version = "1.0.0-SNAPSHOT"
 
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(25)
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
+        jvmTarget.set(JvmTarget.JVM_25)
         optIn.add("kotlin.time.ExperimentalTime")
     }
 }
 java {
-    targetCompatibility = JavaVersion.VERSION_17
-    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_25
+    sourceCompatibility = JavaVersion.VERSION_25
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(25)
     }
 }
 
@@ -59,7 +59,10 @@ dependencies {
 tasks {
     shadowJar {
         manifest {
-            attributes(Pair("Main-Class", "snd.komf.app.ApplicationKt"))
+            attributes(
+                Pair("Main-Class", "snd.komf.app.ApplicationKt"),
+                Pair("Enable-Native-Access", "ALL-UNNAMED"),
+            )
         }
     }
 }
